@@ -1,0 +1,64 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+.front,
+.back {
+    height: 20vh;
+    width: 15vw;
+    color: white;
+    position: absolute;
+}
+
+.front {
+    background-color: red;
+}
+
+.back {
+    background-color: blue;
+    transform: rotateY(90deg);
+   
+}
+
+section:hover .back {
+    animation: front 500ms 200ms reverse forwards;
+
+}
+
+section:hover .front{
+    animation: front 500 forwards;
+}
+
+img {
+    width: 100vw;
+    height: 80vh;
+animation: image 8s ease infinite;
+    margin: 5px;
+}
+
+div {
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@keyframes front {
+    from {
+        transform: rotateY(0deg);
+
+    }
+    to {
+        transform: rotateY(90geg);
+    }
+}
+
+@keyframes image {
+    from{
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-4000px);
+    }
+}
